@@ -10,7 +10,6 @@
     "prisma.prisma",
     "apollographql.vscode-apollo",
     "graphql.vscode-graphql",
-    "mariusalchimavicius.json-to-ts",
     "streetsidesoftware.code-spell-checker"
   ]
 }
