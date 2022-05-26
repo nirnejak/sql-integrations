@@ -1,4 +1,4 @@
-# Typescript Node Starter
+# MongoDB Analytics Tool
 
 Node.js and express project starter using TypeScript
 
