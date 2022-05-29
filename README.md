@@ -1,12 +1,21 @@
 # MongoDB Analytics Tool
 
-Node.js and express project starter using TypeScript
+Tools for analyzing data from MongoDB.
 
-> Note: Need to configure `.env` file to use local server
+**Features**
+
+- SQL Code Editor(with Completion)
+- Data in Tabular Form
+- Graphs and Charts
+- Saved Queries
+- Export to CSV
+- Export to JSON
 
 ---
 
 ## Available Scripts
+
+> Note: Need to configure `.env` file to use local server
 
 **Install Dependencies**
 
