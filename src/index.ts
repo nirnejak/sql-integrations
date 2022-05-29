@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 
 import userRouter from "./router/user"
+import queryRouter from "./router/query"
 import requestLogger from "./middlewares/requestLogger"
 import errorHandler from "./middlewares/errorHandler"
 
@@ -19,6 +20,7 @@ app.get("/", (req: Request, res: Response) => {
 
 // Routes
 app.use("/api/user", userRouter)
+app.use("/api/query", queryRouter)
 
 app.use(errorHandler)
 
