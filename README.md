@@ -1,6 +1,6 @@
 # MongoDB Analytics Tool
 
-Tools for analyzing data from MongoDB.
+A Tool for analyzing data from MongoDB.
 
 **Features**
 
