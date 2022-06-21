@@ -1,13 +1,27 @@
 import { Router } from "express"
 
+import isAuthenticated from "../middlewares/authValidator"
+
 import databaseController from "../controllers/database.controller"
 
 const databaseRouter = Router()
 
-databaseRouter.get("/", databaseController.getDatabases)
-databaseRouter.get("/:databaseId", databaseController.getDatabases)
-databaseRouter.post("/", databaseController.getDatabases)
-databaseRouter.put("/:databaseId", databaseController.getDatabases)
-databaseRouter.delete("/:databaseId", databaseController.getDatabases)
+databaseRouter.get("/", isAuthenticated, databaseController.getDatabases)
+databaseRouter.get(
+  "/:databaseId",
+  isAuthenticated,
+  databaseController.getDatabases
+)
+databaseRouter.post("/", isAuthenticated, databaseController.getDatabases)
+databaseRouter.put(
+  "/:databaseId",
+  isAuthenticated,
+  databaseController.getDatabases
+)
+databaseRouter.delete(
+  "/:databaseId",
+  isAuthenticated,
+  databaseController.getDatabases
+)
 
 export default databaseRouter

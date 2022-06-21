@@ -4,7 +4,7 @@ import { Request, Response } from "express"
 const prisma = new PrismaClient()
 
 /**
- * @route GET /api/user
+ * @route GET /api/user/
  * @access Public
  * @param req Request Object
  * @param res Response Object
@@ -28,7 +28,7 @@ type UserRegisterRequest = {
 }
 
 /**
- * @route POST /api/user/register
+ * @route POST /api/user/register/
  * @access Public
  * @param req Request Object
  * @param res Response Object

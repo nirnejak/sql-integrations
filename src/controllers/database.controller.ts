@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 
 /**
- * @route GET /api/database
+ * @route GET /api/database/
  * @access Public
  * @param req Request Object
  * @param res Response Object
