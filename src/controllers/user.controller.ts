@@ -3,7 +3,7 @@ import { Request, Response } from "express"
 import IUser from "../interfaces/user.interface"
 
 /**
- * @route GET /api/users
+ * @route GET /api/user
  * @access Public
  * @param req Request Object
  * @param res Response Object
