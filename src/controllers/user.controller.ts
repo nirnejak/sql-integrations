@@ -1,6 +1,7 @@
+import { PrismaClient } from "@prisma/client"
 import { Request, Response } from "express"
 
-import IUser from "../interfaces/user.interface"
+const prisma = new PrismaClient()
 
 /**
  * @route GET /api/user
@@ -10,7 +11,7 @@ import IUser from "../interfaces/user.interface"
  * @description Get Users
  */
 const getUsers = (req: Request, res: Response) => {
-  const users: IUser[] = [
+  const users = [
     {
       name: "Jitendra",
       email: "jeetnirnejak@gmail.com",
@@ -20,6 +21,34 @@ const getUsers = (req: Request, res: Response) => {
   res.json({ users })
 }
 
+type UserRegisterRequest = {
+  name: string
+  email: string
+  password: string
+}
+
+/**
+ * @route POST /api/user/register
+ * @access Public
+ * @param req Request Object
+ * @param res Response Object
+ * @description Register a User
+ */
+const registerUser = async (
+  req: Request<{}, {}, UserRegisterRequest, {}>,
+  res: Response
+) => {
+  const user = await prisma.user.create({
+    data: {
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+    },
+  })
+  res.json({ user })
+}
+
 export default {
   getUsers,
+  registerUser,
 }
