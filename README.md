@@ -1,15 +1,17 @@
-# MongoDB Analytics Tool
+# MongoDB Dashboard Tool
 
-A Tool for analyzing data from MongoDB.
+A tool for building Dashboard on MongoDB
 
 **Features**
 
-- SQL Code Editor(with Completion)
+- SQL Code Editor(with Auto-completion)
 - Data in Tabular Form
 - Graphs and Charts
 - Saved Queries
 - Export to CSV
 - Export to JSON
+- Build Dashboards
+- Users and Invites
 
 ---
 
