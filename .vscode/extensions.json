@@ -1,15 +1,11 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
-    "dsznajder.es7-react-js-snippets",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "jock.svg",
     "ms-azuretools.vscode-docker",
     "visualstudioexptteam.vscodeintellicode",
     "prisma.prisma",
-    "apollographql.vscode-apollo",
-    "graphql.vscode-graphql",
     "streetsidesoftware.code-spell-checker"
   ]
 }
