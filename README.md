@@ -12,6 +12,7 @@ A tool for building Dashboard on MongoDB
 - Export to JSON
 - Build Dashboards
 - Users and Invites
+- Integrations - Zapier, IFTTT, Google Sheets, Airtable etc.
 
 ---
 
