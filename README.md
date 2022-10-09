@@ -1,6 +1,6 @@
-# MongoDB Dashboard Tool
+# SQL Integrations Tool
 
-A tool for building Dashboard on MongoDB
+A tool for building integrations between SQL database and other services.
 
 **Features**
 
@@ -10,7 +10,6 @@ A tool for building Dashboard on MongoDB
 - Saved Queries
 - Export to CSV
 - Export to JSON
-- Build Dashboards
 - Users and Invites
 - Integrations - Zapier, IFTTT, Google Sheets, Airtable etc.
 
