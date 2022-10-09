@@ -28,14 +28,27 @@ model Query {
   title String?
   body  String?
 
-  refresh_token String?
-  result        String?
-  is_shared     Int?
+  is_shared Int?
 
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
 
   graph_config GraphConfig?
+  Integration  Integration[]
+}
+
+model Integration {
+  id    Int     @id @default(autoincrement())
+  title String?
+
+  refresh_interval String?
+  result           String?
+
+  created_at DateTime? @default(now())
+  updated_at DateTime? @default(now())
+
+  query   Query? @relation(fields: [queryId], references: [id])
+  queryId Int?
 }
 
 model GraphConfig {
