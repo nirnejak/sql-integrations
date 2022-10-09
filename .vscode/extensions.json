@@ -6,6 +6,7 @@
     "ms-azuretools.vscode-docker",
     "visualstudioexptteam.vscodeintellicode",
     "prisma.prisma",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "VisualStudioExptTeam.vscodeintellicode"
   ]
 }
