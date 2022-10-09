@@ -1,4 +1,6 @@
-import express, { Application, Request, Response } from "express"
+import Fastify, { FastifyReply, FastifyError, FastifyRequest } from "fastify"
+
+import express, { Application, Request } from "express"
 import dotenv from "dotenv"
 import cors from "cors"
 
@@ -16,10 +18,26 @@ const app: Application = express()
 app.use(cors())
 app.use(requestLogger)
 
-app.get("/", (req: Request, res: Response) => {
-  res.locals = { name: "Jitendra Nirnejak" }
-  res.send(`Hello Typescript!`)
+const fastify = Fastify({
+  logger: true,
 })
+
+fastify.get("/", (request: FastifyRequest, reply: FastifyReply) => {
+  reply.locals = { name: "Jitendra Nirnejak" }
+  reply.send(`Hello Typescript!`)
+})
+
+fastify.register(userRouter)
+
+const start = async () => {
+  try {
+    await fastify.listen({ port: parseInt(process.env.PORT || "3000") })
+  } catch (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
+}
+start()
 
 // Routes
 app.use("/api/user", userRouter)
